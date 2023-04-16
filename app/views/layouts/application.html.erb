@@ -15,6 +15,7 @@
   <body class="prose mx-auto">
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+    <%= render partial: "shared_elements/navbar" %>
 
     <div>
       <% if user_signed_in? %>
