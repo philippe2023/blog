@@ -11,5 +11,7 @@ Rails.application.routes.draw do
   # get "/blog_posts/:id/edit", to: "blog_posts#edit", as: :edit_blog_post
   # post "/blog_posts", to: "blog_posts#create", as: :blog_posts
   root "pages#index"
+  get "about", to: "pages#about"
+  get "contact", to: "pages#contact"
   resources :blog_posts
 end
