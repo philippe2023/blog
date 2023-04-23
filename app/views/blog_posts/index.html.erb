@@ -13,7 +13,16 @@
                 <div class="flex items-center justify-between">
                     <span class="text-sm font-light text-gray-600 dark:text-gray-400">Mar 10, 2019</span>
                     <% if blog_post.draft? %>
-                        <div class="px-3 py-1 text-sm font-bold text-gray-100 transition-colors duration-300 transform bg-gray-600 rounded cursor-pointer hover:bg-gray-500" tabindex="0" role="button">Draft</div>
+                        
+                        <div class="px-3 py-1 text-sm font-bold text-gray-100 transition-colors duration-300 transform bg-gray-600 rounded cursor-pointer hover:bg-gray-500 flex" tabindex="0" role="button">
+                            <div class="mr-3">Draft</div>
+                            <div>
+                                <span class="relative flex h-3 w-3">
+                                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+                                    <span class="relative inline-flex rounded-full h-3 w-3 bg-sky-500"></span>
+                                </span>
+                            </div>
+                        </div>
                     <% elsif blog_post.scheduled? %>
                         <div class="px-3 py-1 text-sm font-bold text-gray-100 transition-colors duration-300 transform bg-gray-600 rounded cursor-pointer hover:bg-gray-500" tabindex="0" role="button">Scheduled</div>
                     <% end %>
